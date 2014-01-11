@@ -1,0 +1,10 @@
+{% from "macros/_form.html" import render_form %}
+
+{% extends 'layouts/base.html' %}
+
+{% block body %}
+<div class="settings_wrapper">
+    <h3>Public Profile</h3>
+    {{ render_form(url_for('manage.index'), form) }}
+</div>
+{% endblock %}

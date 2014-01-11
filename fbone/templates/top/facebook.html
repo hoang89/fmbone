@@ -1,0 +1,7 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% for k in facebook %}
+       {{ k }} -- {{ facebook[k] }} <br>
+    {% endfor %}
+{% endblock %}

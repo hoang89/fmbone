@@ -1,0 +1,26 @@
+{% from "macros/_form.html" import render_form %}
+
+{% set page_title = "Sign in" %}
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <div class="row">
+        <div class="jumbotron col-md-6">
+            <h2>Sign in<br>
+                <small>Don't have an account? <a
+                        href="{{ url_for('top.signup') }}">Sign up</a>, please.
+                </small>
+            </h2>
+            {{ render_form(url_for('top.login'), form) }}
+        </div>
+        <div class="col-md-4">
+            <a href="{{ url_for('top.fb') }}">
+                <img src="{{ url_for('static',filename='img/fb.png') }}">
+            </a>
+            <a href="{{ url_for('top.fb') }}">
+                <img src="{{ url_for('static',filename='img/google.png') }}">
+            </a>
+        </div>
+    </div>
+{% endblock %}
